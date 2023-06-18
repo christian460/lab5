@@ -1,5 +1,5 @@
 """
-URL configuration for imageGalery project.
+URL configuration for proyect_galery project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,13 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import include
+
+from django.urls.conf import include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app_galery/', include('app_galery.urls')),
-    path('', RedirectView.as_view(url='galery/')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', include('app_galery.urls'))
+]

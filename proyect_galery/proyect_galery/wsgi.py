@@ -1,5 +1,5 @@
 """
-WSGI config for imageGalery project.
+WSGI config for proyect_galery project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'imageGalery.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyect_galery.settings')
 
 application = get_wsgi_application()
