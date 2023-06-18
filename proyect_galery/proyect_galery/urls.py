@@ -23,6 +23,6 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('galery/', include('galery.urls')),
+    path('app_galery/', include('app_galery.urls')),
     path('', RedirectView.as_view(url='galery/')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
