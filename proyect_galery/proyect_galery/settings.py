@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / "templates"
+            #BASE_DIR / "templates"
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -125,10 +125,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
-
-MEDIA_ROOT = BASE_DIR / "files"
-MEDIA_URL = "/media-files/"
