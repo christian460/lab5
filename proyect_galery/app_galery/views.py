@@ -18,5 +18,6 @@ def form_add_productos(request):
     return render(request, 'add-producto.html', {'form': form})
 
 def galeria(request):
+    # La parte de objects.all() es un metodo para extraer toda la info de la base de datos que contenga esa clase
     productos = Producto.objects.all()
     return render(request, "galery-productos.html", {"productos": productos})
