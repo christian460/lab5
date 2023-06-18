@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('productos/', views.form_add_productos, name="productos"),
+    path('galeria/', views.galeria, name="galeria"),
 ]

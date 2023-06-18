@@ -1,0 +1,19 @@
+<h1>Lista de Productos</h1>
+<div class="productos">
+  {% for producto in productos %}
+  <div class="producto">
+
+    <div class="contenedor_producto">
+
+      <div>
+        <h2>{{ producto.nombre | title }}</h2>
+        <h5>{{ producto.descripcion }}</h5>
+        <h3>${{ producto.precio }}</h3>
+      </div>
+      
+    </div>
+
+  </div>
+  {% endfor%}
+
+</div>
