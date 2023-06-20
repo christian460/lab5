@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 <h1>Lista de Productos</h1>
 <div class="productos">
 
@@ -11,15 +14,17 @@
 
       <!-- Impresion de cada uno de los atributos de los productos: nombre, descripcion y precio
             el '| title', es como un estilo que se le agrega a ese subtitulo, no es importante-->
-      <div>
-        <h2>{{ producto.nombre | title }}</h2>
-        <h5>{{ producto.descripcion }}</h5>
-        <h3>${{ producto.precio }}</h3>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h2 class="card-title">{{ producto.nombre | title }}</h5>
+          <p class="card-text">{{ producto.descripcion }}</p>
+          <h4 class="card-title">${{ producto.precio }}</h3>
+        </div>
       </div>
-      
     </div>
 
   </div>
   {% endfor%}
 
 </div>
+{% endblock %}
